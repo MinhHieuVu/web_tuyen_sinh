@@ -1,0 +1,73 @@
+<div class="position-fixed top-0 right-0 left-0 bg-img-hero" style="height: 32rem; background-image: url(./assets/svg/abstract-bg-4.svg);">
+  <!-- SVG Bottom Shape -->
+  <figure class="position-absolute right-0 bottom-0 left-0">
+    <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1921 273">
+      <polygon fill="#fff" points="0,273 1921,273 1921,0 "></polygon>
+    </svg>
+  </figure>
+  <!-- End SVG Bottom Shape -->
+</div>
+
+<div class="container py-5 py-sm-7">
+  <a class="d-flex justify-content-center mb-5" href="<%= root_path %>">
+    <%#= image_tag "logo.png", class: "z-index-2", style: "width: 16rem;" %>
+  </a>
+
+  <div class="row justify-content-center">
+    <div class="col-md-7 col-lg-6">
+      <!-- Card -->
+      <div class="card card-lg mb-5">
+        <div class="card-body">
+          <!-- Form -->
+          <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+            <%#= render 'shared/message_html' %>
+
+            <div class="text-center">
+              <div class="mb-4">
+                <h1 class="h2">Đăng nhập</h1>
+                <p>Bạn chưa có tài khoản? <a href="<%= new_user_registration_path %>">Đăng ký ngay</a></p>
+              </div>
+
+              <span class="divider text-muted mb-4">Hoặc</span>
+            </div>
+
+            <!-- Form Group -->
+            <div class="js-form-message form-group">
+              <label class="input-label">Tài khoản hoặc email của bạn</label>
+              <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
+            </div>
+            <!-- End Form Group -->
+
+            <!-- Form Group -->
+            <div class="js-form-message form-group">
+              <label class="input-label" for="signupSrPassword" tabindex="0">
+                        <span class="d-flex justify-content-between align-items-center">
+                          Mật khẩu
+                          <a class="input-label-secondary" href="authentication-reset-password-basic.html">Quên mật khẩu?</a>
+                        </span>
+              </label>
+
+              <div class="input-group input-group-merge">
+                <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
+              </div>
+            </div>
+            <!-- End Form Group -->
+
+            <!-- Checkbox -->
+            <div class="form-group">
+              <div class="custom-control custom-checkbox">
+                <%= f.label :remember_me, class: "custom-control-input" %>
+                <label class="custom-control-label text-muted" for="termsCheckbox"> Ghi nhớ tài khoản</label>
+              </div>
+            </div>
+            <!-- End Checkbox -->
+
+            <button type="submit" class="btn btn-lg btn-block btn-primary">Đăng nhập</button>
+          <% end %>
+          <!-- End Form -->
+        </div>
+      </div>
+      <!-- End Card -->
+    </div>
+  </div>
+</div>
