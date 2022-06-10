@@ -21,7 +21,6 @@
           <!-- Form -->
           <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
             <%#= render 'shared/message_html' %>
-
             <div class="text-center">
               <div class="mb-4">
                 <h1 class="h2">Đăng nhập</h1>
@@ -30,14 +29,12 @@
 
               <span class="divider text-muted mb-4">Hoặc</span>
             </div>
-
             <!-- Form Group -->
             <div class="js-form-message form-group">
               <label class="input-label">Tài khoản hoặc email của bạn</label>
               <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
             </div>
             <!-- End Form Group -->
-
             <!-- Form Group -->
             <div class="js-form-message form-group">
               <label class="input-label" for="signupSrPassword" tabindex="0">
@@ -46,13 +43,11 @@
                           <a class="input-label-secondary" href="authentication-reset-password-basic.html">Quên mật khẩu?</a>
                         </span>
               </label>
-
               <div class="input-group input-group-merge">
                 <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
               </div>
             </div>
             <!-- End Form Group -->
-
             <!-- Checkbox -->
             <div class="form-group">
               <div class="custom-control custom-checkbox">
@@ -61,7 +56,6 @@
               </div>
             </div>
             <!-- End Checkbox -->
-
             <button type="submit" class="btn btn-lg btn-block btn-primary">Đăng nhập</button>
           <% end %>
           <!-- End Form -->

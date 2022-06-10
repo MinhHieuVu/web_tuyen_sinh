@@ -16,16 +16,15 @@
             <% if user_signed_in? %>
               <li class="dropdown navbar-nav-item">
                 <a id="blogMegaMenu" class="nav-link nav-link-toggle" href="javascript:;" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-labelledby="blogSubMenu">
-                  <%#= current_user.email %> Vũ Minh Hiếu
+                  Vũ Minh Hiếu
                 </a>
                 <!-- Blog - Submenu -->
-                <div id="blogSubMenu" class="dropdown-menu right-0" aria-labelledby="blogMegaMenu" style="min-width: 180px;">
+                <div id="blogSubMenu" class="dropdown-menu right-0" aria-labelledby="blogMegaMenu"  style="min-width: 180px;">
                   <a class="dropdown-item" href="#">Tài khoản</a>
                   <%# if current_user.admin? %>
-                  <%#= link_to "Quản lý", admin_dashboard_index_path, class: "dropdown-item" %>
+                    <%= link_to "Quản lý", "#", class: "dropdown-item" %>
                   <%# end %>
                   <div class="dropdown-divider"></div>
-                  <%= link_to "Đăng xuất", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
                 </div>
                 <!-- End Submenu -->
               </li>
@@ -37,6 +36,7 @@
             <% end %>
             <!-- End Button -->
           </ul>
+          <%= link_to "Đăng xuất", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
         </div>
         <!-- End Navigation -->
       </nav>
