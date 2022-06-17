@@ -30,7 +30,7 @@ class SetupBase < ActiveRecord::Migration[6.1]
       t.timestamps null: false
     end
 
-    create_table :school_info do |t|
+    create_table :school_infos do |t|
       t.references :school
       t.integer :year
       t.string :objective
@@ -46,7 +46,7 @@ class SetupBase < ActiveRecord::Migration[6.1]
       t.string :tuition
       t.timestamps null: false
     end
-    add_index :school_info, :slug, unique: true
+    add_index :school_infos, :slug, unique: true
 
   end
 end
