@@ -13,13 +13,17 @@
   <%= yield :stylesheets %>
 </head>
 
-<body>
-<div class="container">
-  <%= render 'shared/navbar' %>
-  <%= render 'shared/aside' %>
-  <%= yield %>
-</div>
+<body class="footer-offset has-navbar-vertical-aside navbar-vertical-aside-show-xl">
 
+<%= render 'shared/navbar' %>
+<%= render 'shared/aside' %>
+
+<main id="content" role="main" class="main">
+  <div class="content container-fluid">
+    <%= yield %>
+  </div>
+</main>
 
 </body>
+
 </html>
