@@ -1,13 +1,13 @@
 <nav aria-label="breadcrumb" class="mt-3">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><%= link_to "Trang chủ", root_path %></li>
-    <li class="breadcrumb-item active" aria-current="page">DS Khu Vực</li>
+    <li class="breadcrumb-item active" aria-current="page">DS Tỉnh Thành</li>
   </ol>
 </nav>
 
 <div class="card">
   <h5 class="card-header">
-    Danh sách Khu Vực
+    Danh sách Tỉnh Thành
   </h5>
   <div class="card-body">
     <table class="table table-bordered">
@@ -20,21 +20,21 @@
       </tr>
       </thead>
       <tbody>
-      <% @areas.each do |area| %>
+      <% @provinces.each do |province| %>
         <tr>
-          <td><%= link_to area.id, areas_path(area) %></td>
-          <td><%= link_to area.name, areas_path(area) %></td>
-          <td><%= link_to area.description, areas_path(area) %></td>
+          <td><%= link_to province.id, province_path(province) %></td>
+          <td><%= link_to province.name, province_path(province) %></td>
+          <td><%= link_to province.description, province_path(province) %></td>
           <td><%= area.slug %></td>
           <td>
-            <%= link_to ' Sửa', edit_area_path(area) %>
-            <%= link_to 'Xoá', area_path(area), method: :delete, data: {confirm: "Are you sure?"} %>
+            <%= link_to ' Sửa', edit_province_path(province) %>
+            <%= link_to 'Xoá', province_path(province), method: :delete, data: {confirm: "Are you sure?"} %>
           </td>
         </tr>
       <% end %>
       </tbody>
     </table>
 
-    <%= link_to "Thêm mới", new_area_path, class: "btn btn-primary" %>
+    <%= link_to "Thêm mới", new_province_path, class: "btn btn-primary" %>
   </div>
 </div>
