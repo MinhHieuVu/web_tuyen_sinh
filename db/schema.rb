@@ -10,10 +10,64 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_07_135341) do
+ActiveRecord::Schema.define(version: 2022_06_15_233336) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "areas", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.string "slug"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["slug"], name: "index_areas_on_slug", unique: true
+  end
+
+  create_table "provinces", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.string "slug"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["slug"], name: "index_provinces_on_slug", unique: true
+  end
+
+  create_table "school_infos", force: :cascade do |t|
+    t.bigint "school_id"
+    t.integer "year"
+    t.string "objective"
+    t.text "scope"
+    t.string "method"
+    t.string "criteria"
+    t.text "threshold"
+    t.string "slug"
+    t.string "info"
+    t.string "incorporation"
+    t.string "policy"
+    t.string "fees"
+    t.string "tuition"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["school_id"], name: "index_school_infos_on_school_id"
+    t.index ["slug"], name: "index_school_infos_on_slug", unique: true
+  end
+
+  create_table "schools", force: :cascade do |t|
+    t.string "code"
+    t.string "name"
+    t.string "slug"
+    t.string "address"
+    t.string "school_type"
+    t.integer "phone"
+    t.string "website"
+    t.bigint "area_id"
+    t.bigint "province_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["area_id"], name: "index_schools_on_area_id"
+    t.index ["province_id"], name: "index_schools_on_province_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false

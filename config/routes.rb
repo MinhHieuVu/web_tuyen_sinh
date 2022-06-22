@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :school_infos
   resources :schools
   resources :provinces
   resources :areas
