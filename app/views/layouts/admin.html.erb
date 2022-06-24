@@ -14,12 +14,17 @@
 </head>
 
 <body class="footer-offset has-navbar-vertical-aside navbar-vertical-aside-show-xl">
+<%= render 'admin/shared/header' %>
 
-<%= render 'shared/navbar' %>
+<%= render 'admin/shared/aside' %>
 
 <main id="content" role="main" class="main">
   <div class="content container-fluid">
     <%= yield %>
+  </div>
+
+  <div class="footer">
+    <%= render 'admin/shared/footer' %>
   </div>
 </main>
 

@@ -1,11 +1,16 @@
 Rails.application.routes.draw do
-  resources :school_infos
-  resources :schools
-  resources :provinces
-  resources :areas
-  get 'home/index'
-  devise_for :users
+
+  devise_for :users,
+             path: '',
+             path_names: { sign_in: 'dang-nhap', sign_out: 'dang-xuat', sign_up: 'dang-ky' }
 
   root to: "home#index"
+
+  namespace :admin do
+    resources :school_infos
+    resources :schools
+    resources :provinces
+    resources :areas
+  end
 
 end

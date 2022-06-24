@@ -1,4 +1,4 @@
-<%= form_with(model: area) do |form| %>
+<%= form_with(model: [:admin, area], local: true) do |form| %>
   <% if area.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(area.errors.count, "error") %> prohibited this Test from being saved:</h2>

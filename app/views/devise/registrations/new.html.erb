@@ -6,10 +6,22 @@
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <%= render "devise/shared/error_messages", resource: resource %>
         <br><br>
+
+        <div class="form-group">
+          <%= f.label "Tên đăng nhập" %><span style="color: red;">*</span><br/>
+          <%= f.text_field :username, class: "form-control", placeholder: "Tên để bạn truy cập và sử dụng về sau. VD: Số điện thoại", required: true %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label "Họ và tên", class: "label-text" %><span style="color: red;">*</span><br/>
+          <%= f.email_field :name, class: "form-control", placeholder: "Nhập Họ và Tên của bạn ", required: true %>
+        </div>
+
         <div class="form-group">
           <%= f.label "Email", class: "label-text" %><span style="color: red;">*</span><br/>
           <%= f.email_field :email, class: "form-control", placeholder: "Nhập địa chỉ thư điện tử của bạn", required: true %>
         </div>
+
         <div class="form-row">
           <div class="col">
             <%= f.label "Mật khẩu" %><span style="color: red;">*</span>
@@ -23,7 +35,9 @@
             <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Xác nhận mật khẩu", class: "form-control", required: true %>
           </div>
         </div>
+
         <br><br>
+
         <div class="actions text-center">
           <%= f.submit "Đăng ký", class: "btn btn-lg btn-block btn-primary" %>
         </div>

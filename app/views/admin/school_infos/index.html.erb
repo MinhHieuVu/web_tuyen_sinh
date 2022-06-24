@@ -15,7 +15,7 @@
       <tr>
         <td><%= school_info.year %></td>
         <td><%= link_to 'Show', school_info %></td>
-        <td><%= link_to 'Edit', edit_school_info_path(school_info) %></td>
+        <td><%= link_to 'Edit', edit_admin_school_info_path(school_info) %></td>
         <td><%= link_to 'Destroy', school_info, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -24,4 +24,4 @@
 
 <br>
 
-<%= link_to 'New School Info', new_school_info_path %>
+<%= link_to 'New School Info', new_admin_school_info_path %>
