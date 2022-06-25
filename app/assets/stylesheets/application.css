@@ -15,3 +15,7 @@
  */
 @import "theme.scss";
 
+
+.navbar {
+    margin-bottom: 20px;
+}

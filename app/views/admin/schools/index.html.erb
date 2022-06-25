@@ -22,13 +22,13 @@
       <tbody>
       <% @schools.each do |school| %>
         <tr>
-          <td><%= link_to school.id, schools_path(school) %></td>
-          <td><%= link_to school.code, schools_path(school) %></td>
-          <td><%= link_to school.name, schools_path(school) %></td>
-          <td><%= link_to school.address, schools_path(school) %></td>
+          <td><%= link_to school.id, admin_schools_path(school) %></td>
+          <td><%= link_to school.code, admin_schools_path(school) %></td>
+          <td><%= link_to school.name, admin_schools_path(school) %></td>
+          <td><%= link_to school.address, admin_schools_path(school) %></td>
           <td>
-            <%= link_to ' Sửa', edit_school_path(school) %>
-            <%= link_to 'Xoá', school_path(school), method: :delete, data: {confirm: "Are you sure?"} %>
+            <%= link_to ' Sửa', edit_admin_school_path(school) %>
+            <%= link_to 'Xoá', admin_school_path(school), method: :delete, data: {confirm: "Are you sure?"} %>
           </td>
         </tr>
       <% end %>

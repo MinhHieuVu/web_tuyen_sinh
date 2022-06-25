@@ -1,28 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
-  <title>TuyenSinh</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%#= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   <%= yield :stylesheets %>
+
+  <%#= favicon_link_tag %>
 </head>
 
-<body class="footer-offset has-navbar-vertical-aside navbar-vertical-aside-show-xl">
-
+<body class="container">
 <%= render 'shared/navbar' %>
 
-<main id="content" role="main" class="main">
-  <div class="content container-fluid">
-    <%= yield %>
-  </div>
+<main class="col-md-12 d-flex">
 </main>
 
-</body>
 
+<%= yield %>
+
+<%= render 'shared/footer' %>
+
+<%= yield :javascripts %>
+</body>
 </html>

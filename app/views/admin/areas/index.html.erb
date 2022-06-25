@@ -27,8 +27,8 @@
           <td><%= link_to area.description, admin_areas_path(area) %></td>
           <td><%= area.slug %></td>
           <td>
-            <%= link_to ' Sửa', edit_admin_area_path(area) %>
-            <%= link_to 'Xoá', admin_area_path(area), method: :delete, data: {confirm: "Are you sure?"} %>
+            <%= link_to ' Sửa', edit_admin_area_path(area),class: "btn btn-info float-right ml-2" %>
+            <%= link_to 'Xoá', admin_area_path(area), method: :delete, data: {confirm: "Are you sure?"} ,class: "btn btn-danger float-right ml-2"%>
           </td>
         </tr>
       <% end %>
