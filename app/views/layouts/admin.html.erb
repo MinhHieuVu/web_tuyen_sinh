@@ -9,13 +9,14 @@
 
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%#= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%#= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   <%= yield :stylesheets %>
 </head>
 
 <body class="footer-offset has-navbar-vertical-aside navbar-vertical-aside-show-xl ">
 
-<%= render 'admin/shared/header' %>
+<%#= render 'admin/shared/header' %>
 
 <div class="col-md-3">
   <%= render 'admin/shared/aside' %>
@@ -25,12 +26,10 @@
   <div class="content container-fluid">
     <%= yield %>
   </div>
-
   <div class="footer">
-    <%= render 'admin/shared/footer' %>
+    <%#= render 'admin/shared/footer' %>
   </div>
 </main>
-
 </body>
 
 </html>

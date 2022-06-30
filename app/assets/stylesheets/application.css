@@ -14,9 +14,9 @@
  *= require_self
  */
 @import "theme.scss";
-
+@import "font_awesome5.css";
 
 .navbar {
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 }
 

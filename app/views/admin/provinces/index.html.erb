@@ -25,10 +25,10 @@
           <td><%= link_to province.id, admin_province_path(province) %></td>
           <td><%= link_to province.name, admin_province_path(province) %></td>
           <td><%= link_to province.description, admin_province_path(province) %></td>
-          <td><%= area.slug %></td>
+          <td><%= province.slug %></td>
           <td>
-            <%= link_to ' Sửa', edit_admin_province_path(province) %>
-            <%= link_to 'Xoá', admin_province_path(province), method: :delete, data: {confirm: "Are you sure?"} %>
+            <%= link_to ' Sửa', edit_admin_province_path(province) ,class: "btn btn-info float-right ml-2"%>
+            <%= link_to 'Xoá', admin_province_path(province), method: :delete, data: {confirm: "Are you sure?"} ,class: "btn btn-danger float-right ml-2"%>
           </td>
         </tr>
       <% end %>
