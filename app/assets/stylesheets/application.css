@@ -19,4 +19,14 @@
 .navbar {
     margin-bottom: 0px;
 }
+.nav-home {
+    list-style: none;
+}
+
+#header {
+    border-bottom: 1px solid #dee2e6;
+}
+.sidebar-home {
+    background: transparent;
+}
 

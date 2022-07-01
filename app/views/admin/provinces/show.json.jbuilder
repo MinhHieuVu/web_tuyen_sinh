@@ -1,1 +1,1 @@
-json.partial! "provinces/province", province: @province
+json.partial! "admin/provinces/province", province: @province

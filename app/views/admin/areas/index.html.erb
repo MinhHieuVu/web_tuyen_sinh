@@ -22,9 +22,9 @@
       <tbody>
       <% @areas.each do |area| %>
         <tr>
-          <td><%= link_to area.id, admin_areas_path(area) %></td>
-          <td><%= link_to area.name, admin_areas_path(area) %></td>
-          <td><%= link_to area.description, admin_areas_path(area) %></td>
+          <td><%= link_to area.id, admin_area_path(area) %></td>
+          <td><%= link_to area.name, admin_area_path(area) %></td>
+          <td><%= link_to area.description, admin_area_path(area) %></td>
           <td><%= area.slug %></td>
           <td>
             <%= link_to ' Sửa', edit_admin_area_path(area),class: "btn btn-info float-right ml-2" %>

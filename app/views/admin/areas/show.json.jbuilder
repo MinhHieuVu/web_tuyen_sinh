@@ -1,1 +1,1 @@
-json.partial! "areas/area", area: @area
+json.partial! "admin/areas/area", area: @area

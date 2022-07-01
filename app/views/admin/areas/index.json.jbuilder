@@ -1,1 +1,1 @@
-json.array! @areas, partial: "areas/area", as: :area
+json.array! @areas, partial: "admin/areas/area", as: :area
