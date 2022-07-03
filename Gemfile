@@ -50,3 +50,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #gem update new
 gem 'devise'
 gem 'font_awesome5_rails'
+gem 'friendly_id', '~> 5.4.0'

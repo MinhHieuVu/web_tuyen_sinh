@@ -4,6 +4,8 @@ class Admin::AreasController < ApplicationController
   before_action :authenticate_admin!
   before_action :set_area, only: [:show, :edit, :update, :destroy]
 
+
+
   # GET /areas or /areas.json
   def index
     @areas = Area.all
@@ -63,7 +65,7 @@ class Admin::AreasController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_area
-      @area = Area.find(params[:id])
+      @area = Area.friendly.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.

@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   root to: "home#index"
   get ':school_id',to: 'home#index' , as: 'school_index'
-  get ':school_id/:school_info_id' , to: 'home#index', as: "school_info_index"
+  get ':school_info_id' , to: 'home#index', as: "school_info_index"
 
 
   namespace :admin do
