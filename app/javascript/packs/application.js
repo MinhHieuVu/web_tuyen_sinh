@@ -14,3 +14,7 @@ ActiveStorage.start()
 
 
 import "../stylesheets/application.scss";
+
+// application.js
+import "trix"
+import "@rails/actiontext"

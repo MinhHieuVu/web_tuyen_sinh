@@ -3,7 +3,7 @@
   </br>
   <% @provinces.each do |province| %>
     <div class="mb-2">
-      <%= link_to province.name, admin_province_path(province), class: "fa5-text text-muted" %>
+      <%= link_to province.name, province_index_path(province), class: "fa5-text text-muted" %>
     </div>
   <% end %>
 </sidebar>

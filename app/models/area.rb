@@ -3,5 +3,6 @@ class Area < ApplicationRecord
   friendly_id :name, use: :slugged
 
   has_many :schools
+  has_rich_text :description
 
 end
