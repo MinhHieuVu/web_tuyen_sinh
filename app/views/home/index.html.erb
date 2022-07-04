@@ -3,45 +3,45 @@
   <div class="col-md-3">
     <%= render 'shared/sidebar' %>
   </div>
-
-  <div class="col-md-9">
-    <content class="col-lg-8">
-      <div class=" middle-col" data-width="790" style="width: 790px;">
-        <h1>Mã trường Đại học, Học viện, Cao đẳng năm 2021</h1>
-        <hr>
-        <h2>Mã trường Đại học, Học viện, Cao đẳng năm 2021</h2>
-        <p>Dưới đây là danh sách mã trường Đại học, Cao đẳng năm 2021 của toàn bộ các trường đại học, cao đẳng, trung
-          học
-          chuyên nghiệp, nghề trên toàn quốc. Trường Đại học và mã trường được sắp xếp theo các tỉnh, thành phố, và trên
-          trình duyệt, bạn dùng tổ hợp phím <b>Ctrl + F</b> để tìm trường bạn muốn.</p>
-        <table class="table table-bordered">
-          <tbody>
-          <tr>
-            <th style="text-align:center;">Mã trường</th>
-            <th style="text-align:center;">Tên trường</th>
-          </tr>
-          <tr>
-          </tr>
-          <% @schools.each do |school| %>
-            <tr>
-              <td> <%= link_to school.code, school_index_path(school) %> </td>
-              <td>
-                <a href="#">
-                  <b style="color:blue;"> <%= link_to school.name, school_info_index_path(school) %> </b>
-                </a>
-              </td>
-            </tr>
-            <tr>
-            </tr>
-            <tr>
-          <% end %>
-          </tr>
-          </tbody>
-        </table>
-        <hr>
-      </div>
-    </content>
-  </div>
+  <%= render 'home/home_by_school' %>
+<!--  <div class="col-md-9">-->
+<!--    <content class="col-lg-8">-->
+<!--      <div class=" middle-col" data-width="790" style="width: 790px;">-->
+<!--        <h1>Mã trường Đại học, Học viện, Cao đẳng năm 2021</h1>-->
+<!--        <hr>-->
+<!--        <h2>Mã trường Đại học, Học viện, Cao đẳng năm 2021</h2>-->
+<!--        <p>Dưới đây là danh sách mã trường Đại học, Cao đẳng năm 2021 của toàn bộ các trường đại học, cao đẳng, trung-->
+<!--          học-->
+<!--          chuyên nghiệp, nghề trên toàn quốc. Trường Đại học và mã trường được sắp xếp theo các tỉnh, thành phố, và trên-->
+<!--          trình duyệt, bạn dùng tổ hợp phím <b>Ctrl + F</b> để tìm trường bạn muốn.</p>-->
+<!--        <table class="table table-bordered">-->
+<!--          <tbody>-->
+<!--          <tr>-->
+<!--            <th style="text-align:center;">Mã trường</th>-->
+<!--            <th style="text-align:center;">Tên trường</th>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--          </tr>-->
+          <%# @schools.each do |school| %>
+<!--            <tr>-->
+<!--              <td> <%#= link_to school.code, school_index_path(school) %> </td>-->
+<!--              <td>-->
+<!--                <a href="#">-->
+<!--                  <b style="color:blue;"> <%#= link_to school.name, school_info_index_path(school) %> </b>-->
+<!--                </a>-->
+<!--              </td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--            </tr>-->
+<!--            <tr>-->
+          <%# end %>
+<!--          </tr>-->
+<!--          </tbody>-->
+<!--        </table>-->
+<!--        <hr>-->
+<!--      </div>-->
+<!--    </content>-->
+<!--  </div>-->
 
 
 </div>

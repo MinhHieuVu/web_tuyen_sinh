@@ -71,4 +71,5 @@ class Admin::SchoolInfosController < ApplicationController
       params.require(:school_info).permit(:year, :objective, :scope, :method, :criteria, :threshold, :info,
                                           :incorporation, :policy, :fees, :tuition)
     end
+
 end
