@@ -10,7 +10,6 @@ Rails.application.routes.draw do
   get ':area_id' , to: 'home#index', as: "area_index"
   get ':province_id' , to: 'home#index', as: "province_index"
 
-
   namespace :admin do
     resources :school_infos
     resources :schools

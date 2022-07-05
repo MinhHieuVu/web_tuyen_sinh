@@ -57,7 +57,7 @@ class Admin::AreasController < ApplicationController
     @area.destroy
 
     respond_to do |format|
-      format.html { redirect_to admin_areas_url, notice: "Area was successfully destroyed." }
+      format.html { redirect_to admin_area_url, notice: "Area was successfully destroyed." }
       format.json { head :no_content }
     end
   end
