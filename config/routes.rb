@@ -6,9 +6,9 @@ Rails.application.routes.draw do
 
   root to: "home#index"
   get ':school_id',to: 'home#index' , as: 'school_index'
-  get ':school_info_id' , to: 'home#index', as: "school_info_index"
-  get ':area_id' , to: 'home#index', as: "area_index"
-  get ':province_id' , to: 'home#index', as: "province_index"
+  get ':school_info_id' , to: 'home#index', as: 'school_info_index'
+  get ':area_id' , to: 'home#index', as: 'area_index'
+  get ':province_id' , to: 'home#index', as: 'province_index'
 
   namespace :admin do
     resources :school_infos
