@@ -1,0 +1,39 @@
+<main class="container post">
+  <div class="row">
+    <div class="col-md-3">
+      <%= render 'schools/sidebar' %>
+    </div>
+    <div class="col-md-9 text-break mt-5">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb" style="margin-bottom: 0; padding: 0.75rem 0;">
+          <li class="breadcrumb-item"><%= link_to "home", root_path %></li>
+          <% if @province.present? %>
+            <li class="breadcrumb-item"><%= link_to @province.name, province_path(@province) %></li>
+          <% end %>
+          <li class="breadcrumb-item active" aria-current="page"><%= @school_info %></li>
+        </ol>
+      </nav>
+
+      <h1 class="h2"><%= "Danh sách trường #{@school_info} tại #{@province.present? ? @province.name : "Việt Nam"}" %></h1>
+
+      <% if @schools %>
+        <table class="table table-bordered">
+          <thead>
+          <th width="30%">Mã trường</th>
+          <th>Tên trường</th>
+          </thead>
+          <tbody>
+          <% @schools.each do |school| %>
+            <tr>
+              <td><%= school.code %></td>
+              <td class="font-weight-bold"><%= link_to school.name, school_path(school) %></td>
+            </tr>
+          <% end %>
+          </tbody>
+        </table>
+      <% else %>
+        <div>Tại <%= @province.present? ? @province.name : "Việt Nam" %> không có trường <%= @school_info %> nào</div>
+      <% end %>
+    </div>
+  </div>
+</main>

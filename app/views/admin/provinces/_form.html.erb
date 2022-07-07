@@ -27,6 +27,12 @@
           <%= form.text_area :description, class: "form-control", placeholder: "Please input name", required: true %>
         </div>
       </div>
+      <div class="form-group row">
+        <%= form.label 'Khu Vực', class: 'col-lg-2 col-form-label' %>
+        <div class="col-lg-8">
+          <%= form.select :area_id, options_for_select(Area.all.collect{|type| [type.name, type.id]}, @province.area ? @province.area.id : ""), {include_blank: "-- Vui lòng chọn kiểu khu vực --"}, class: "form-control select2" %>
+        </div>
+      </div>
 
       <div class="d-flex justify-content-end">
         <%= form.submit "Save changes", class: "btn btn-primary" %>

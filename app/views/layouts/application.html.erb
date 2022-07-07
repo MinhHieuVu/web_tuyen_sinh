@@ -12,17 +12,16 @@
   <%= yield :stylesheets %>
   <%#= favicon_link_tag %>
 </head>
-<body class="container">
-<%= render 'shared/navbar' %>
+<body >
+<div class="container">
+  <%= render 'shared/navbar' %>
 
-<main class="col-md-12 d-flex">
-</main>
+  <%= yield %>
+  <%= yield :javascripts %>
+</div>
 
-
-<%= yield %>
 
 <%= render 'shared/footer' %>
 
-<%= yield :javascripts %>
 </body>
 </html>

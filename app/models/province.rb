@@ -4,6 +4,6 @@ class Province < ApplicationRecord
   friendly_id :name, use: :slugged
 
   has_many :schools
-  has_rich_text :description
+  belongs_to :area, optional: true
 
 end

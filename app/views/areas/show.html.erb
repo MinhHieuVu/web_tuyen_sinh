@@ -1,3 +1,5 @@
+
+
 <main class="container post">
   <div class="row">
     <div class="col-md-3">
@@ -6,11 +8,12 @@
     <div class="col-md-9 text-break">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb" style="margin-bottom: 0; padding: 0.75rem 0;">
-          <li class="breadcrumb-item"><%= link_to 'Trang Chủ', root_path %></li>
+          <li class="breadcrumb-item"><%= link_to "Trang  Chủ", root_path %></li>
+          <li class="breadcrumb-item active" aria-current="page"><%= @area.name %></li>
         </ol>
       </nav>
 
-      <h1 class="h3">Thông tin tuyển sinh ĐH CĐ năm 2021 -  Mã trường, thông tin chi tiết Đại học, Cao đăng trên cả nước</h1>
+      <h1 class="h3">Thông tin tuyển sinh ĐH CĐ khu vực <%= @area.name %> năm 2021 -  Mã trường, thông tin chi tiết Đại học, Cao đăng trên cả nước</h1>
       <hr>
       <div>
         Tìm đáp án tổng hợp đầy đủ và chi tiết nhất Thông tin tuyển sinh của tất cả các trường Đại Học Cao Đăng trên cả nước, các em học sinh, phụ huynh có thể dễ dàng tra cứu thông tin tuyển sinh như đối tượng, chỉ tiêu, phương thức hay phạm vi tuyển sinh của hơn 300 trường cần quan tâm.
@@ -18,8 +21,8 @@
 
       <div>Để xem chi tiết thông tin tuyển sinh về các trường Đại Học, Cao Đẳng, Học viện mời các bạn click vào đường link bên dưới:</div>
       <Br>
-      <h3>Mã và tên về trường Đại học, Học viện, Cao đẳng</h3>
-      <% Province.all.each do |province| %>
+      <h3>Mã và tên về trường Đại học, Học viện, Cao đẳng khu vực <%= @area.name %></h3>
+      <% @area.provinces.each do |province| %>
         <h4>Mã trường ĐH CĐ tại <%= province.name %></h4>
         <table class="table table-bordered">
           <thead>

@@ -9,11 +9,18 @@ class SetupBase < ActiveRecord::Migration[6.1]
     end
     add_index :areas, :slug, unique: true
 
+    Area.create(name: "Miền Bắc")
+    Area.create(name: "Miền Trung")
+    Area.create(name: "Tây Nguyên")
+    Area.create(name: "Miền Nam")
+
     create_table :provinces do |t|
       t.string :name
       t.text :description
+      t.references :area
       t.string :slug
-      t.timestamps null: false
+      t.boolean :is_popular
+      t.integer :province_type
     end
     add_index :provinces, :slug, unique: true
 
