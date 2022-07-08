@@ -5,5 +5,6 @@ class Province < ApplicationRecord
 
   has_many :schools
   belongs_to :area, optional: true
+  has_rich_text :description
 
 end

@@ -7,7 +7,7 @@
     <div class="col-md-9 text-break">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb" style="margin-bottom: 0; padding: 0.75rem 0;">
-          <li class="breadcrumb-item"><%= link_to "Trang Chủ", root_path %></li>
+          <li class="breadcrumb-item"><%= link_to fa_icon("home"), root_path %></li>
           <li class="breadcrumb-item active" aria-current="page"><%= @province.name %></li>
         </ol>
       </nav>
@@ -21,11 +21,11 @@
       <div>Để xem chi tiết thông tin tuyển sinh về các trường Đại Học, Cao Đẳng, Học viện mời các bạn click vào đường link bên dưới:</div>
       <br>
 
-      <% School::SCHOOL_INFO.each do |k, v| %>
-        <div>
-          <%= link_to "Danh sách trường #{v} tại #{@province.name}", province_school_info_path(@province, k.to_sym) %>
-        </div>
-      <% end %>
+      <%# School::SCHOOL_INFO.each do |k, v| %>
+<!--        <div>-->
+          <%#= link_to "Danh sách trường #{v} tại #{@province.name}", province_school_info_path(@province, k.to_sym) %>
+<!--        </div>-->
+      <%# end %>
 
       <br>
 

@@ -69,7 +69,7 @@ class Admin::SchoolInfosController < ApplicationController
     # Only allow a list of trusted parameters through.
     def school_info_params
       params.require(:school_info).permit(:year, :objective, :scope, :method, :criteria, :threshold, :info,
-                                          :incorporation, :policy, :fees, :tuition)
+                                          :incorporation, :policy, :fees, :tuition, :school_id)
     end
 
 end
