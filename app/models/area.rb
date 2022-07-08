@@ -4,5 +4,6 @@ class Area < ApplicationRecord
 
   # has_many :schools
   has_many :provinces
+  has_rich_text :description
 
 end

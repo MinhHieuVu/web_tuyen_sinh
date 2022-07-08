@@ -12,9 +12,13 @@ Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
+import "@fortawesome/fontawesome-free/css/all"
+
 
 import "../stylesheets/application.scss";
 
 // application.js
 import "trix"
 import "@rails/actiontext"
+
+

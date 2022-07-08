@@ -18,20 +18,5 @@
 @import "actiontext.scss ";
 @import "~trix/dist/trix.css";
 
-.navbar {
-    margin-bottom: 0px;
-}
-.nav-home {
-    list-style: none;
-}
 
-#header {
-    border-bottom: 1px solid #dee2e6;
-}
-.sidebar-home {
-    background: transparent;
-}
-.footer-page {
-    margin-top: 40px;
-}
 

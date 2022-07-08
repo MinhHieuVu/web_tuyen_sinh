@@ -6,15 +6,16 @@
           <%= image_tag 'img.png', height: 40, alt: "Tuyen sinh" %>
         <% end %>
         <li class="nav-home nav-item active">
-          <%= link_to "Trang Chủ", root_path, class: "nav-link" %>
+          <%= link_to fa_icon("home") , root_path, class: "nav-link" %>
         </li>
+        <%= link_to "Đăng xuất", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
         <div id="navBar" class="collapse navbar-collapse ">
           <ul class="navbar-nav">
             <% if user_signed_in? %>
               <li class="dropdown navbar-nav-item navbar-nav-last-item">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Xin chào <%= current_user.name %></a>
+                <a id="blogSubMenu" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Xin chào <%= current_user.name %></a>
                 <div id="blogSubMenu" class="dropdown-menu right-0" aria-labelledby="blogMegaMenu" style="min-width: 180px;">
-                  <a class="dropdown-item" href="#">Tài khoản</a>
+                  <a  class="dropdown-item" href="#">Tài khoản</a>
                   <% if current_user.admin? %>
                     <%= link_to "Quản lý",  admin_dashboard_index_path, class: "dropdown-item" %>
                   <% end %>
