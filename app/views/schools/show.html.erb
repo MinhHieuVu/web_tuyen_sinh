@@ -12,10 +12,7 @@
       </nav>
 
       <h1 class="h2"><%= @school.name %> - <%= @school.code %></h1>
-      <%#= @school.school_infos.where(year: @current_year).first.content.html_safe %>
-        <p>Năm : <%= @school_info.year %></p>
-
-
+      <%= @school.school_infos.where(year: @current_year).first.content.html_safe %>
     </div>
   </div>
 </main>

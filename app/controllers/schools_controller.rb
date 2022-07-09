@@ -6,6 +6,5 @@ class SchoolsController < ApplicationController
   def show
     @current_year = 2021
     @school = School.friendly.find(params[:id])
-    @school_info = SchoolInfo.all
   end
 end
