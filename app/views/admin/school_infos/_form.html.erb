@@ -45,49 +45,49 @@
         <div class="row form-group">
           <%= form.label 'Chỉ Tiêu Tuyển Sinh', class: "col-sm-2 col-form-label input-label" %>
           <div class="col-sm-10">
-            <%= form.rich_text_area :criteria, class: "form-control", placeholder: "Nhập chỉ tiêu tuyển sinh", required: true %>
+            <%= form.rich_text_area :criteria, class: "form-control action-text", placeholder: "Nhập chỉ tiêu tuyển sinh", required: true %>
           </div>
         </div>
 
         <div class="row form-group">
           <%= form.label 'Ngưỡng Đảm Bảo Chất Lượng Đầu Vào ', class: "col-sm-2 col-form-label input-label" %>
           <div class="col-sm-10">
-            <%= form.rich_text_area :threshold, class: "form-control", placeholder: "Nhập ngưỡng đảm bảo chất lượng đầu vào", required: true %>
+            <%= form.rich_text_area :threshold, class: "form-control action-text", placeholder: "Nhập ngưỡng đảm bảo chất lượng đầu vào", required: true %>
           </div>
         </div>
 
         <div class="row form-group">
           <%= form.label 'Các thông tin cần thiết khác', class: "col-sm-2 col-form-label input-label" %>
           <div class="col-sm-10">
-            <%= form.rich_text_area :info, class: "form-control", placeholder: "Nhập cá thông tin cần thiêt khác", required: true %>
+            <%= form.rich_text_area :info, class: "form-control action-text", placeholder: "Nhập cá thông tin cần thiêt khác", required: true %>
           </div>
         </div>
 
         <div class="row form-group">
           <%= form.label 'Tổ chức tuyển sinh', class: "col-sm-2 col-form-label input-label" %>
           <div class="col-sm-10">
-            <%= form.rich_text_area :incorporation, class: "form-control", placeholder: "Nhập tổ chức tuyển sinh", required: true %>
+            <%= form.rich_text_area :incorporation, class: "form-control action-text", placeholder: "Nhập tổ chức tuyển sinh", required: true %>
           </div>
         </div>
 
         <div class="row form-group">
           <%= form.label 'Chính sách ưu tiên', class: "col-sm-2 col-form-label input-label" %>
           <div class="col-sm-10">
-            <%= form.rich_text_area :policy, class: "form-control", placeholder: "Nhập chính sách ưu tiên", required: true %>
+            <%= form.rich_text_area :policy, class: "form-control action-text action-text", placeholder: "Nhập chính sách ưu tiên", required: true %>
           </div>
         </div>
 
         <div class="row form-group">
           <%= form.label 'Lệ phí xét tuyển', class: "col-sm-2 col-form-label input-label" %>
           <div class="col-sm-10">
-            <%= form.rich_text_area :fees, class: "form-control", placeholder: "Nhập lệ phí xét tuyển", required: true %>
+            <%= form.rich_text_area :fees, class: "form-control action-text", placeholder: "Nhập lệ phí xét tuyển", required: true %>
           </div>
         </div>
 
         <div class="row form-group">
           <%= form.label 'Học phí dự kiến', class: "col-sm-2 col-form-label input-label" %>
           <div class="col-sm-10">
-            <%= form.text_area :tuition, class: "form-control", placeholder: "Nhập học phí dự kiến", required: true %>
+            <%= form.rich_text_area :tuition, class: "form-control", placeholder: "Nhập học phí dự kiến", required: true %>
           </div>
         </div>
 
@@ -103,5 +103,11 @@
         </div>
       </div>
     </div>
-  <% end %>
+<% end %>
+<style>
+    .action-text {
+        min-height: 400px;
+        height: auto;
+    }
+</style>
 

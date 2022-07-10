@@ -13,7 +13,8 @@
           <ul class="navbar-nav">
             <% if user_signed_in? %>
               <li class="dropdown navbar-nav-last-item">
-                <a id="blogSubMenu" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><%= fa_icon("user") %>  . <%= current_user.name %></a>
+                <a id="blogMegaMenu" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                   aria-expanded="false"><%= fa_icon("user") %>  . <%= current_user.name %></a>
                 <div id="blogSubMenu" class="dropdown-menu right-0" aria-labelledby="blogMegaMenu" style="min-width: 180px;">
                   <a  class="dropdown-item" href="#"> Tài khoản </a>
                   <% if current_user.admin? %>

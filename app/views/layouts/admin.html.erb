@@ -1,32 +1,29 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title> TuyenSinh </title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <%= csrf_meta_tags %>
-  <%= csp_meta_tag %>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  <%= yield :stylesheets %>
-</head>
+  <head>
+    <title> TuyenSinh </title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= yield :stylesheets %>
+  </head>
 
-<body class="footer-offset has-navbar-vertical-aside navbar-vertical-aside-show-xl ">
-
-<%= render 'admin/shared/header' %>
-
-<div class="col-md-3">
-  <%= render 'admin/shared/aside' %>
-</div>
-
-<main id="content" role="main" class="main">
-  <div class="content container-fluid">
-    <%= yield %>
-  </div>
-  <div class="footer">
-    <%= render 'admin/shared/footer' %>
-  </div>
-</main>
-</body>
+  <body class="footer-offset has-navbar-vertical-aside navbar-vertical-aside-show-xl ">
+    <%= render 'admin/shared/header' %>
+    <div class="col-md-3">
+      <%= render 'admin/shared/aside' %>
+    </div>
+    <main id="content" role="main" class="main">
+      <div class="content container-fluid">
+        <%= yield %>
+      </div>
+      <div class="footer">
+        <%= render 'admin/shared/footer' %>
+      </div>
+    </main>
+  </body>
 
 </html>
