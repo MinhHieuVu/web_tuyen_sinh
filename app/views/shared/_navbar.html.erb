@@ -3,10 +3,11 @@
     <div id="logoAndNav" class="container">
       <nav class="navbar navbar-expand-lg">
         <%= link_to root_path, class: 'navbar-brand mr-5' do %>
-          <%= image_tag 'img.png', height: 40, alt: "Tuyen sinh" %>
+          <%= image_tag 'img.png', height: 55, alt: "Tuyen sinh" %>
         <% end %>
         <li class="nav-home nav-item active">
-          <%= link_to fa_icon("home")  , root_path, class: "nav-link" %>
+          <p><i class="fas fa-home me-3"></i> <%= link_to  "Trang Chủ" , root_path, class: "nav-home" %></p>
+
         </li>
 
         <div id="navBar" class="collapse navbar-collapse ">
