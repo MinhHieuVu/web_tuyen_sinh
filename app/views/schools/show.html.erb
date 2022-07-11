@@ -6,13 +6,24 @@
     <div class="col-md-9 text-break mt-5">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb" style="margin-bottom: 0; padding: 0.75rem 0;">
-          <li class="breadcrumb-item"><%= link_to "Trang Chủ", root_path %></li>
+          <li class="breadcrumb-item"><%= link_to fa_icon("home") , root_path %></li>
           <li class="breadcrumb-item active" aria-current="page"><%= @school.name %></li>
         </ol>
       </nav>
 
-      <h1 class="h2"><%= @school.name %> - <%= @school.code %></h1>
-      <%= @school.school_infos.where(year: @current_year).first.content.html_safe %>
+      <% school = @school %>
+      <p>Kí Hiệu:  <%= school.code %></p>
+      <p>Tên Trường:  <%= school.name %></p>
+      <p>Loại Hình:  <%= school.school_type %></p>
+      <p>Địa Chỉ:  <%= school.address %></p>
+      <p>Điện Thoại:  <%= school.phone %></p>
+      <p>Wedsite:  <%= school.website %></p>
+
+      <%#= @school.school_infos.where(year: @current_year).first.content.html_safe %>
+      <% school.school_infos.each do |school_info| %>
+          <p>Năm: <%= school_info.year %></p>
+          <p>Đối Tượng Tuyển Sinh: <%= school_info.objective %></p>b
+      <% end %>
     </div>
   </div>
 </main>
