@@ -6,11 +6,11 @@ class School < ApplicationRecord
   belongs_to :province, optional: true
   has_many :school_infos
 
-  # SCHOOL_INFO = {
-  #   "cong-lap": "Công lập",
-  #   "tu-thuc": "Tự thục",
-  #   "dan-lap": "Dân lập"
-  # }
+  SCHOOL_TYPE = {
+    "cong-lap": "Công lập",
+    "tu-thuc": "Tự thục",
+    "dan-lap": "Dân lập"
+  }
   has_rich_text :objective
   has_rich_text :scope
   has_rich_text :method

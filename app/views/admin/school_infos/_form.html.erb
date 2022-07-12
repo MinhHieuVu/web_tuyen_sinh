@@ -23,77 +23,77 @@
 
         <div class="row form-group">
           <%= form.label 'Đối Tượng Tuyển Sinh', class: "col-sm-2 col-form-label input-label" %>
-          <div class="col-sm-10">
+          <div class="col-lg-10">
             <%= form.text_area :objective, class: "form-control", placeholder: "Nhập đối tượng tuyển sinh", required: true %>
           </div>
         </div>
 
         <div class="row form-group">
           <%= form.label 'Phạm Vi Tuyển Sinh', class: "col-sm-2 col-form-label input-label" %>
-          <div class="col-sm-10">
+          <div class="col-lg-10">
             <%= form.text_area :scope, class: "form-control", placeholder: "Nhập phạm vi tuyển sinh", required: true %>
           </div>
         </div>
 
         <div class="row form-group">
           <%= form.label 'Phương Thức Tuyển Sinh', class: "col-sm-2 col-form-label input-label" %>
-          <div class="col-sm-10">
+          <div class="col-lg-10">
             <%= form.text_area :method, class: "form-control", placeholder: "Nhập phương thức tuyển sinh", required: true %>
           </div>
         </div>
 
         <div class="row form-group">
           <%= form.label 'Chỉ Tiêu Tuyển Sinh', class: "col-sm-2 col-form-label input-label" %>
-          <div class="col-sm-10">
+          <div class="col-lg-10">
             <%= form.rich_text_area :criteria, class: "form-control action-text", placeholder: "Nhập chỉ tiêu tuyển sinh", required: true %>
           </div>
         </div>
 
         <div class="row form-group">
           <%= form.label 'Ngưỡng Đảm Bảo Chất Lượng Đầu Vào ', class: "col-sm-2 col-form-label input-label" %>
-          <div class="col-sm-10">
+          <div class="col-lg-10">
             <%= form.rich_text_area :threshold, class: "form-control action-text", placeholder: "Nhập ngưỡng đảm bảo chất lượng đầu vào", required: true %>
           </div>
         </div>
 
         <div class="row form-group">
           <%= form.label 'Các thông tin cần thiết khác', class: "col-sm-2 col-form-label input-label" %>
-          <div class="col-sm-10">
+          <div class="col-lg-10">
             <%= form.rich_text_area :info, class: "form-control action-text", placeholder: "Nhập cá thông tin cần thiêt khác", required: true %>
           </div>
         </div>
 
         <div class="row form-group">
           <%= form.label 'Tổ chức tuyển sinh', class: "col-sm-2 col-form-label input-label" %>
-          <div class="col-sm-10">
+          <div class="col-lg-10">
             <%= form.rich_text_area :incorporation, class: "form-control action-text", placeholder: "Nhập tổ chức tuyển sinh", required: true %>
           </div>
         </div>
 
         <div class="row form-group">
           <%= form.label 'Chính sách ưu tiên', class: "col-sm-2 col-form-label input-label" %>
-          <div class="col-sm-10">
+          <div class="col-lg-10">
             <%= form.rich_text_area :policy, class: "form-control action-text action-text", placeholder: "Nhập chính sách ưu tiên", required: true %>
           </div>
         </div>
 
         <div class="row form-group">
           <%= form.label 'Lệ phí xét tuyển', class: "col-sm-2 col-form-label input-label" %>
-          <div class="col-sm-10">
+          <div class="col-lg-10">
             <%= form.rich_text_area :fees, class: "form-control action-text", placeholder: "Nhập lệ phí xét tuyển", required: true %>
           </div>
         </div>
 
         <div class="row form-group">
           <%= form.label 'Học phí dự kiến', class: "col-sm-2 col-form-label input-label" %>
-          <div class="col-sm-10">
+          <div class="col-lg-10">
             <%= form.rich_text_area :tuition, class: "form-control", placeholder: "Nhập học phí dự kiến", required: true %>
           </div>
         </div>
 
         <div class="form-group row">
           <%= form.label 'Thuộc Trường Học', class: 'col-lg-2 col-form-label' %>
-          <div class="col-lg-8">
+          <div class="col-lg-10">
             <%= form.select :school_id, options_for_select(School.all.collect{|type| [type.name, type.id]}, @school_info.school ? @school_info.school.id : ""), {include_blank: "-- Vui lòng chọn thuộc trường học--"}, class: "form-control select2" %>
           </div>
         </div>

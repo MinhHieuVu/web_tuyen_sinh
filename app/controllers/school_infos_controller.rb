@@ -4,7 +4,7 @@ class SchoolIndoController < ApplicationController
   end
 
   def show
-    @school_info = School::SCHOOL_INFO[params[:id].to_sym]
+    # @school_info = School::SCHOOL_TYPE[params[:id].to_sym]
 
     if @school_info.present?
       @schools = School.where(school_type: @school_info)

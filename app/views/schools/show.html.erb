@@ -3,15 +3,19 @@
     <div class="col-md-3">
       <%= render 'schools/sidebar' %>
     </div>
-    <div class="col-md-9 text-break mt-5">
+    <div class="col-md-9 text-break">
       <nav aria-label="breadcrumb">
-        <ol class="breadcrumb" style="margin-bottom: 0; padding: 0.75rem 0;">
+        <ol class="breadcrumb" style="margin-bottom: 1rem; padding: 1rem; ">
           <li class="breadcrumb-item"><%= link_to fa_icon("home") , root_path %></li>
           <li class="breadcrumb-item active" aria-current="page"><%= @school.name %></li>
         </ol>
       </nav>
-
       <% school = @school %>
+
+      <h1 class="h2"><%= school.name %> - <%= school.code %></h1>
+      <p style="text-align:center; color:red;"><b>Trường Đại học, Học Viện, Cao đẳng tại Hà Nội</b></p>
+      <p style="text-align:center; color:red;"><b><%= school.name %></b></p>
+
       <p>Kí Hiệu:  <%= school.code %></p>
       <p>Tên Trường:  <%= school.name %></p>
       <p>Loại Hình:  <%= school.school_type %></p>
@@ -21,9 +25,29 @@
 
       <%#= @school.school_infos.where(year: @current_year).first.content.html_safe %>
       <% school.school_infos.each do |school_info| %>
-          <p>Năm: <%= school_info.year %></p>
-          <p>Đối Tượng Tuyển Sinh: <%= school_info.objective %></p>b
-      <% end %>
+        <p>Năm: <%= school_info.year %></p>
+        <p><b style="color:blue;">1. Đối tượng tuyển sinh:</b></p>
+        <%= school_info.objective %>
+        <p><b style="color:blue;">2. Phạm vi tuyển sinh:</b></p>
+        <%= school_info.scope %>
+        <p><b style="color:blue;">3. Phương thức tuyển sinh</b></p>
+        <%= school_info.method %>
+        <p><b style="color:blue;">4. Chỉ tiêu tuyển sinh</b></p>
+        <%= school_info.criteria %>
+        <p><b style="color:blue;">5. Ngưỡng đảm bảo chất lượng đầu vào, điều kiện nhận ĐKXT</b></p>
+        <%= school_info.threshold %>
+        <p><b style="color:blue;">6. Các thông tin cần thiết khác để thí sinh ĐKXT vào các ngành của trường</b></p>
+        <%= school_info.info %>
+        <p><b style="color:blue;">7. Tổ chức tuyển sinh</b></p>
+        <%= school_info.incorporation %>
+        <p><b style="color:blue;">8. Chính sách ưu tiên</b></p>
+        <%= school_info.policy %>
+        <p><b style="color:blue;">9. Lệ phí xét tuyển</b></p>
+        <%= school_info.fees %>
+        <p><b style="color:blue;">10. Học phí dự kiến</b></p>
+        <%= school_info.tuition %>
+
+    <% end %>
     </div>
   </div>
 </main>
