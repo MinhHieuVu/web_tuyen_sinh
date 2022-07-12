@@ -1,40 +1,41 @@
 <header id="header" class="header left-aligned-navbar ">
-  <div class="header-section">
-    <div id="logoAndNav" class="container">
-      <nav class="navbar navbar-expand-lg">
-        <%= link_to root_path, class: 'navbar-brand mr-5' do %>
-          <%= image_tag 'img.png', height: 55, alt: "Tuyen sinh" %>
-        <% end %>
-        <li class="nav-home nav-item active">
-          <p><i class="fas fa-home me-3"></i> <%= link_to  "Trang Chủ" , root_path, class: "nav-home" %></p>
-
-        </li>
-
-        <div id="navBar" class="collapse navbar-collapse ">
-          <ul class="navbar-nav">
-            <% if user_signed_in? %>
-              <li class="dropdown navbar-nav-last-item">
-                <a id="blogMegaMenu" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-                   aria-expanded="false"><%= fa_icon("user") %>  . <%= current_user.name %></a>
-                <div id="blogSubMenu" class="dropdown-menu right-0" aria-labelledby="blogMegaMenu" style="min-width: 180px;">
-                  <a  class="dropdown-item" href="#"> Tài khoản </a>
-                  <% if current_user.admin? %>
-                    <%= link_to "Quản lý",  admin_dashboard_index_path, class: "dropdown-item" %>
-                  <% end %>
-                  <div class="dropdown-item"></div>
-                  <%= link_to "Đăng xuất", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-                </div>
-              </li>
-            <% else %>
-              <li class="navbar-nav-last-item">
-                <%= link_to "Đăng ký", new_user_registration_path, class: "btn btn-sm btn-outline-primary transition-3d-hover" %>
-                <%= link_to "Đăng nhập", new_user_session_path, class: "btn btn-sm btn-primary transition-3d-hover" %>
-              </li>
+   <div class="header-section">
+      <div id="logoAndNav" class="container">
+         <nav class="navbar navbar-expand-lg">
+            <%= link_to root_path, class: 'navbar-brand mr-5' do %>
+               <%= image_tag 'img.png', height: 55, alt: "Tuyen sinh" %>
             <% end %>
-          </ul>
-        </div>
-      </nav>
+            <li class="nav-home nav-item active">
+               <p><i class="fas fa-home me-3"></i> <%= link_to "Trang Chủ", root_path, class: "nav-home" %></p>
 
-    </div>
-  </div>
+            </li>
+
+            <div id="navBar" class="collapse navbar-collapse ">
+               <ul class="navbar-nav">
+                  <% if user_signed_in? %>
+                     <li class="dropdown navbar-nav-last-item">
+                        <a id="blogMegaMenu" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"
+                           role="button" aria-haspopup="true" aria-expanded="false"><%= fa_icon("user") %>
+                           . <%= current_user.name %></a>
+                        <div id="blogSubMenu" class="dropdown-menu right-0" aria-labelledby="blogMegaMenu" style="min-width: 180px;">
+                           <a class="dropdown-item" href="#"> Tài khoản </a>
+                           <% if current_user.admin? %>
+                              <%= link_to "Quản lý", admin_dashboard_index_path, class: "dropdown-item" %>
+                           <% end %>
+                           <div class="dropdown-item"></div>
+                           <%= link_to "Đăng xuất", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+                        </div>
+                     </li>
+                  <% else %>
+                     <li class="navbar-nav-last-item">
+                        <%= link_to "Đăng ký", new_user_registration_path, class: "btn btn-sm btn-outline-primary transition-3d-hover" %>
+                        <%= link_to "Đăng nhập", new_user_session_path, class: "btn btn-sm btn-primary transition-3d-hover" %>
+                     </li>
+                  <% end %>
+               </ul>
+            </div>
+         </nav>
+
+      </div>
+   </div>
 </header>

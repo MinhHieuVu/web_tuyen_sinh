@@ -13,6 +13,7 @@ Turbolinks.start()
 ActiveStorage.start()
 
 import "@fortawesome/fontawesome-free/css/all"
+
 global.toastr = require("toastr")
 import "../stylesheets/application"
 

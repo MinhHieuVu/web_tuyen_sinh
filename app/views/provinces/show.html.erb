@@ -1,56 +1,60 @@
-
 <main class="container post">
-  <div class="row">
-    <div class="col-md-3">
-      <%= render "schools/sidebar" %>
+    <div class="row">
+        <div class="col-md-3">
+            <%= render "schools/sidebar" %>
+        </div>
+        <div class="col-md-9 text-break">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb" style="margin-bottom: 0; padding: 0.75rem 0;">
+                    <li class="breadcrumb-item"><%= link_to fa_icon("home"), root_path %></li>
+                    <li class="breadcrumb-item active" aria-current="page"><%= @province.name %></li>
+                </ol>
+            </nav>
+
+            <h1 class="h3">Thông tin tuyển sinh ĐH CĐ tại <%= @province.name %> năm 2021 - Mã trường, thông tin chi tiết
+                Đại học, Cao đăng trên cả nước</h1>
+            <hr>
+            <div>
+                Tìm đáp án tổng hợp đầy đủ và chi tiết nhất Thông tin tuyển sinh của tất cả các trường Đại Học Cao Đăng
+                trên cả nước, các em học sinh, phụ huynh có thể dễ dàng tra cứu thông tin tuyển sinh như đối tượng, chỉ
+                tiêu, phương thức hay phạm vi tuyển sinh của hơn 300 trường cần quan tâm.
+            </div>
+
+            <div>Để xem chi tiết thông tin tuyển sinh về các trường Đại Học, Cao Đẳng, Học viện mời các bạn click vào
+                đường link bên dưới:
+            </div>
+            <br>
+
+            <%# School::SCHOOL_TYPE.each do |k, v| %>
+            <!--        <div>-->
+            <%#= link_to "Danh sách trường #{v} tại #{@province.name}", province_school_info_path(@province, k.to_sym) %>
+            <!--        </div>-->
+            <%# end %>
+
+            <br>
+
+            <h3>Mã và tên về trường Đại học, Học viện, Cao đẳng tại <%= @province.name %></h3>
+            <% province = @province %>
+            <h4>Mã trường ĐH CĐ tại <%= province.name %></h4>
+
+            <% if province.schools.size > 0 %>
+                <table class="table table-bordered">
+                    <thead>
+                    <th width="30%">Mã trường</th>
+                    <th>Tên trường</th>
+                    </thead>
+                    <tbody>
+                    <% province.schools.each do |school| %>
+                        <tr>
+                            <td><%= school.code %></td>
+                            <td class="font-weight-bold"><%= link_to school.name, school_path(school) %></td>
+                        </tr>
+                    <% end %>
+                    </tbody>
+                </table>
+            <% else %>
+                <div>Tại <%= province.name %> không có trường Đại học, Học viện, Cao đẳng nào</div>
+            <% end %>
+        </div>
     </div>
-    <div class="col-md-9 text-break">
-      <nav aria-label="breadcrumb">
-        <ol class="breadcrumb" style="margin-bottom: 0; padding: 0.75rem 0;">
-          <li class="breadcrumb-item"><%= link_to fa_icon("home"), root_path %></li>
-          <li class="breadcrumb-item active" aria-current="page"><%= @province.name %></li>
-        </ol>
-      </nav>
-
-      <h1 class="h3">Thông tin tuyển sinh ĐH CĐ tại <%= @province.name %> năm 2021 -  Mã trường, thông tin chi tiết Đại học, Cao đăng trên cả nước</h1>
-      <hr>
-      <div>
-        Tìm đáp án tổng hợp đầy đủ và chi tiết nhất Thông tin tuyển sinh của tất cả các trường Đại Học Cao Đăng trên cả nước, các em học sinh, phụ huynh có thể dễ dàng tra cứu thông tin tuyển sinh như đối tượng, chỉ tiêu, phương thức hay phạm vi tuyển sinh của hơn 300 trường cần quan tâm.
-      </div>
-
-      <div>Để xem chi tiết thông tin tuyển sinh về các trường Đại Học, Cao Đẳng, Học viện mời các bạn click vào đường link bên dưới:</div>
-      <br>
-
-      <%# School::SCHOOL_TYPE.each do |k, v| %>
-<!--        <div>-->
-          <%#= link_to "Danh sách trường #{v} tại #{@province.name}", province_school_info_path(@province, k.to_sym) %>
-<!--        </div>-->
-      <%# end %>
-
-      <br>
-
-      <h3>Mã và tên về trường Đại học, Học viện, Cao đẳng tại <%= @province.name %></h3>
-      <% province = @province %>
-      <h4>Mã trường ĐH CĐ tại <%= province.name %></h4>
-
-      <% if province.schools.size > 0 %>
-        <table class="table table-bordered">
-          <thead>
-          <th width="30%">Mã trường</th>
-          <th>Tên trường</th>
-          </thead>
-          <tbody>
-          <% province.schools.each do |school| %>
-            <tr>
-              <td><%= school.code %></td>
-              <td class="font-weight-bold"><%= link_to school.name, school_path(school) %></td>
-            </tr>
-          <% end %>
-          </tbody>
-        </table>
-      <% else %>
-        <div>Tại <%= province.name %> không có trường Đại học, Học viện, Cao đẳng nào</div>
-      <% end %>
-    </div>
-  </div>
 </main>

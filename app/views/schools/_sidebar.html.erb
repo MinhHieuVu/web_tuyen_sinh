@@ -1,5 +1,5 @@
 <div class="navbar-expand-lg navbar-expand-lg-collapse-block">
-  <button type="button" class="navbar-toggler btn btn-block border py-3" aria-label="Toggle navigation" aria-expanded="false" aria-controls="sidebarNav" data-toggle="collapse" data-target="#sidebarNav">
+   <button type="button" class="navbar-toggler btn btn-block border py-3" aria-label="Toggle navigation" aria-expanded="false" aria-controls="sidebarNav" data-toggle="collapse" data-target="#sidebarNav">
               <span class="d-flex justify-content-between align-items-center">
                 <span class="h5 mb-0">Danh mục</span>
                 <span class="navbar-toggler-default">
@@ -13,36 +13,38 @@
                   </svg>
                 </span>
               </span>
-  </button>
+   </button>
 
-  <div id="sidebarNav" class="collapse navbar-collapse mt-3">
-    <h2 class="h4"><%= link_to "Thông tin tuyển sinh 2022", root_path, class: "text-inherit" %></h2>
-    <hr>
-    <div class="mt-5 mt-lg-0">
-      <h3 class="h5">Tỉnh, thành phố lớn</h3>
-      <% Province.all.each do |province| %>
-        <div><%= link_to province.name, province_path(province), class: "dropdown-item d-flex justify-content-between align-items-center px-0" %></div>
-      <% end %>
-    </div>
-
-    <% Area.all.each do |area| %>
+   <div id="sidebarNav" class="collapse navbar-collapse mt-3">
+      <h2 class="h4"><%= link_to "Thông tin tuyển sinh 2022", root_path, class: "text-inherit" %></h2>
       <hr>
       <div class="mt-5 mt-lg-0">
-        <h3 class="h5"> <%= link_to "Khu vực #{area.name}", area_path(area), class: "text-inherit" %></h3>
-        <% area.provinces.all.each do |province| %>
-          <div class="fa-province-sidebar"><i class="fas fa-hand-point-right link-dtm"></i><%= link_to province.name, province_path(province), class: "dropdown-item d-flex justify-content-between align-items-center px-0" %></div>
-        <% end %>
+         <h3 class="h5">Tỉnh, thành phố lớn</h3>
+         <% Province.all.each do |province| %>
+            <div><%= link_to province.name, province_path(province), class: "dropdown-item d-flex justify-content-between align-items-center px-0" %></div>
+         <% end %>
       </div>
-    <% end %>
 
-    <hr>
-<!--    <div class="mt-5 mt-lg-0">-->
-<!--      <h3 class="h5">Loại hình trường</h3>-->
+      <% Area.all.each do |area| %>
+         <hr>
+         <div class="mt-5 mt-lg-0">
+            <h3 class="h5"> <%= link_to "Khu vực #{area.name}", area_path(area), class: "text-inherit" %></h3>
+            <% area.provinces.all.each do |province| %>
+               <div class="fa-province-sidebar">
+                  <i class="fas fa-hand-point-right link-dtm"></i><%= link_to province.name, province_path(province), class: "dropdown-item d-flex justify-content-between align-items-center px-0" %>
+               </div>
+            <% end %>
+         </div>
+      <% end %>
+
+      <hr>
+      <!--    <div class="mt-5 mt-lg-0">-->
+      <!--      <h3 class="h5">Loại hình trường</h3>-->
       <%# School::SCHOOL_INFO.each do |k, v| %>
-<!--        <div><%#= link_to "Trường #{v}", school_info_path(k.to_sym), class: "dropdown-item d-flex justify-content-between align-items-center px-0" %></div>-->
+      <!--        <div><%#= link_to "Trường #{v}", school_info_path(k.to_sym), class: "dropdown-item d-flex justify-content-between align-items-center px-0" %></div>-->
       <%# end %>
-<!--    </div>-->
-  </div>
+      <!--    </div>-->
+   </div>
 </div>
 
 

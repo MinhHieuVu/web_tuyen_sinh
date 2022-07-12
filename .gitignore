@@ -9,6 +9,7 @@
 /.idea
 
 
+
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
@@ -26,9 +27,9 @@
 
 /public/assets
 .byebug_history
-Gemfile.lock
-yarn.lock
-.
+./Gemfile.lock
+./yarn.lock
+
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key

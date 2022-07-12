@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi">
-  <head>
+<head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <%= csrf_meta_tags %>
@@ -8,14 +8,14 @@
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= yield :stylesheets %>
-  </head>
-  <body >
-  <div class="container">
+</head>
+<body>
+<div class="container">
     <%= render 'shared/navbar' %>
     <%= yield %>
     <%= yield :javascripts %>
     <%= toastr_flash %>
-  </div>
-  <%= render 'shared/footer' %>
-  </body>
+</div>
+<%= render 'shared/footer' %>
+</body>
 </html>
