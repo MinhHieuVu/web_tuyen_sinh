@@ -64,7 +64,7 @@ class Admin::SchoolInfosController < ApplicationController
 
     # Use callbacks to share common setup or constraints between actions.
     def set_school_info
-        @school_info = SchoolInfo.friendly.find(params[:id])
+        @school_info = SchoolInfo.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.

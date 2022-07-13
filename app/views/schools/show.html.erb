@@ -33,7 +33,7 @@
             <p><b style="color:blue;">3. Phương thức tuyển sinh</b></p>
             <%= school_info.method %>
             <p><b style="color:blue;">4. Chỉ tiêu tuyển sinh</b></p>
-            <%= school_info.criteria %>
+            <%= school_info.criteria.html_safe %>
             <p><b style="color:blue;">5. Ngưỡng đảm bảo chất lượng đầu vào, điều kiện nhận ĐKXT</b></p>
             <%= school_info.threshold %>
             <p><b style="color:blue;">6. Các thông tin cần thiết khác để thí sinh ĐKXT vào các ngành của trường</b>

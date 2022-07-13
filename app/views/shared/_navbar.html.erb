@@ -13,19 +13,19 @@
             <div id="navBar" class="collapse navbar-collapse ">
                <ul class="navbar-nav">
                   <% if user_signed_in? %>
-                     <li class="dropdown navbar-nav-last-item">
-                        <a id="blogMegaMenu" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"
-                           role="button" aria-haspopup="true" aria-expanded="false"><%= fa_icon("user") %>
-                           . <%= current_user.name %></a>
-                        <div id="blogSubMenu" class="dropdown-menu right-0" aria-labelledby="blogMegaMenu" style="min-width: 180px;">
-                           <a class="dropdown-item" href="#"> Tài khoản </a>
-                           <% if current_user.admin? %>
-                              <%= link_to "Quản lý", admin_dashboard_index_path, class: "dropdown-item" %>
-                           <% end %>
-                           <div class="dropdown-item"></div>
-                           <%= link_to "Đăng xuất", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+                     <div class="dropdown navbar-nav-last-item">
+                        <a><%= fa_icon("user") %> . <%= current_user.name %> <i class="fa-solid fa-caret-down"></i></a>
+                        <div class="dropdown-content ">
+                           <div>
+                              <a class="dropdown-item" href="#"> Tài khoản </a>
+                              <% if current_user.admin? %>
+                                 <%= link_to "Quản lý TT", admin_dashboard_index_path, class: "dropdown-item" %>
+                              <% end %>
+                              <%= link_to "Đăng xuất", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+                           </div>
                         </div>
-                     </li>
+                     </div>
+
                   <% else %>
                      <li class="navbar-nav-last-item">
                         <%= link_to "Đăng ký", new_user_registration_path, class: "btn btn-sm btn-outline-primary transition-3d-hover" %>
