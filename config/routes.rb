@@ -21,4 +21,10 @@ Rails.application.routes.draw do
     get 'dashboard/index'
   end
 
+  resources :users, only: [:show] do
+    member do
+
+    end
+  end
+
 end

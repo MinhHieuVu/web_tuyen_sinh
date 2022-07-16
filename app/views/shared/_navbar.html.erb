@@ -17,7 +17,7 @@
                         <a><%= fa_icon("user") %> . <%= current_user.name %> <i class="fa-solid fa-caret-down"></i></a>
                         <div class="dropdown-content ">
                            <div>
-                              <a class="dropdown-item" href="#"> Tài khoản </a>
+                              <a class="dropdown-item" href="<%= user_path(current_user) %>"> Tài khoản </a>
                               <% if current_user.admin? %>
                                  <%= link_to "Quản lý TT", admin_dashboard_index_path, class: "dropdown-item" %>
                               <% end %>

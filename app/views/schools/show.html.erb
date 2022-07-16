@@ -15,14 +15,12 @@
          <h1 class="h2"><%= school.name %> - <%= school.code %></h1>
          <p style="text-align:center; color:red;"><b>Trường Đại học, Học Viện, Cao đẳng tại Hà Nội</b></p>
          <p style="text-align:center; color:red;"><b><%= school.name %></b></p>
-
          <p>Kí Hiệu:  <%= school.code %></p>
          <p>Tên Trường:  <%= school.name %></p>
          <p>Loại Hình:  <%= school.school_type %></p>
          <p>Địa Chỉ:  <%= school.address %></p>
          <p>Điện Thoại:  <%= school.phone %></p>
          <p>Wedsite:  <%= school.website %></p>
-
          <%#= @school.school_infos.where(year: @current_year).first.content.html_safe %>
          <% school.school_infos.each do |school_info| %>
             <p>Năm: <%= school_info.year %></p>
@@ -35,18 +33,17 @@
             <p><b style="color:blue;">4. Chỉ tiêu tuyển sinh</b></p>
             <%= school_info.criteria.html_safe %>
             <p><b style="color:blue;">5. Ngưỡng đảm bảo chất lượng đầu vào, điều kiện nhận ĐKXT</b></p>
-            <%= school_info.threshold %>
-            <p><b style="color:blue;">6. Các thông tin cần thiết khác để thí sinh ĐKXT vào các ngành của trường</b>
-            </p>
-            <%= school_info.info %>
+            <%= school_info.threshold.html_safe %>
+            <p><b style="color:blue;">6. Các thông tin cần thiết khác để thí sinh ĐKXT vào các ngành của trường</b></p>
+            <%= school_info.info.html_safe %>
             <p><b style="color:blue;">7. Tổ chức tuyển sinh</b></p>
-            <%= school_info.incorporation %>
+            <%= school_info.incorporation.html_safe %>
             <p><b style="color:blue;">8. Chính sách ưu tiên</b></p>
-            <%= school_info.policy %>
+            <%= school_info.policy.html_safe %>
             <p><b style="color:blue;">9. Lệ phí xét tuyển</b></p>
-            <%= school_info.fees %>
+            <%= school_info.fees.html_safe %>
             <p><b style="color:blue;">10. Học phí dự kiến</b></p>
-            <%= school_info.tuition %>
+            <%= school_info.tuition.html_safe %>
 
          <% end %>
       </div>
