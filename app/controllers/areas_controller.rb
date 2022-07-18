@@ -6,4 +6,5 @@ class AreasController < ApplicationController
   def show
     @area = Area.friendly.find(params[:id])
   end
+
 end
