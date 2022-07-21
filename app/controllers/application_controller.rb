@@ -38,7 +38,7 @@ class ApplicationController < ActionController::Base
 
     def render_404(options = {})
         render_error({ :message => "Ôi không!!! Không thể tìm thấy link bạn đang truy cập. Nếu đây là lỗi, vui lòng báo
-                                    cho admin qua Facebook Tìm Đáp Án. Cảm ơn bạn!", :status => 404 }.merge(options))
+                                    cho admin. Cảm ơn bạn!", :status => 404 }.merge(options))
         false
     end
 
